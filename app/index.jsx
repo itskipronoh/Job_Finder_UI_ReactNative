@@ -15,7 +15,7 @@ export default function GetStarted({navigation}) {
       <Pressable style={({pressed}) => [
               styles.button,
               pressed && {opacity: 1.8, backgroundColor:'#987200'},
-      ]} onPress={() => router.push('/(tabs)')}>
+      ]} onPress={() => router.push('/(home)')}>
      
         <Text style={styles.textbutton}> GET STARTED </Text> 
       </Pressable>
