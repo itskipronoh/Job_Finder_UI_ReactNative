@@ -1,27 +1,28 @@
+import { Redirect } from 'expo-router';
 import { router } from 'expo-router';
 import * as React from 'react';
 import { Text, View, StyleSheet, Image, Pressable } from 'react-native';
-export default function GetStarted({navigation}) {
+
+export default function GetStarted() {
   return (
     <View style={styles.container}>
       <Image
         style={styles.logo}
         // source={require('../assets/job-finder-logo-vector.jpg')}
-    
       />
       <Image style={styles.pic1} source={require('../assets/job_finder.jpg')} />
       <Text style={styles.text1}> JOB FINDER </Text>
       <Text style={styles.text2}>We provide you the<Text style={styles.text3}> Best & Available </Text>Job services </Text>
-      <Pressable style={({pressed}) => [
-              styles.button,
-              pressed && {opacity: 1.8, backgroundColor:'#987200'},
-      ]} onPress={() => router.push('/(home)')}>
-     
-        <Text style={styles.textbutton}> GET STARTED </Text> 
+      <Pressable style={({ pressed }) => [
+        styles.button,
+        pressed && { opacity: 1.8, backgroundColor: '#987200' },
+      ]} onPress={() => router.push('/home')}>
+        <Text style={styles.textbutton}> GET STARTED </Text>
       </Pressable>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#FFFFFF",
   },
-  logo:{
+  logo: {
     resizeMode: 'center',
     height: 177,
     width: 250,
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#3F6CDF',
   },
-  button:{
+  button: {
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 12,
@@ -66,13 +67,13 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     width: 300,
     padding: 10,
-    backgroundColor:'#3F6CDF',
-    marginTop:10,
+    backgroundColor: '#3F6CDF',
+    marginTop: 10,
   },
-  textbutton:{
+  textbutton: {
     color: '#000000',
     alignItems: 'center',
     fontWeight: 'bold',
     justifyContent: 'center',
-  }
+  },
 });
