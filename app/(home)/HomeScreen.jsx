@@ -1,9 +1,9 @@
 import { View, Text, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons';
 
 const HomeScreen = ({ route, navigation }) => {
     return (
-        <View style={{ flex: 1, marginTop: 36 }}>
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }} style={{ marginTop: 36 }}>
             <View style={{
                 flex: 0.18,
                 backgroundColor: '#3F6CDF',
@@ -35,7 +35,7 @@ const HomeScreen = ({ route, navigation }) => {
                     alignItems: 'center',
                     position: 'absolute',
                     bottom: -25,
-                    width: 350,
+                    width: '90%',
                     alignSelf: 'center'
                 }}>
                     <Ionicons name='search' size={24} color='#171716' />
@@ -46,7 +46,6 @@ const HomeScreen = ({ route, navigation }) => {
                             flex: 1
                         }} />
                 </View>
-
             </View>
 
             <View style={{ flex: 0.82, padding: 16 }}>
@@ -58,7 +57,6 @@ const HomeScreen = ({ route, navigation }) => {
 
                 <View style={{ height: 200 }}>
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-
                         <View style={{
                             backgroundColor: '#FFF',
                             padding: 16,
@@ -172,8 +170,6 @@ const HomeScreen = ({ route, navigation }) => {
                 }}>Recent Job List</Text>
 
                 <ScrollView showsVerticalScrollIndicator={false}>
-
-
                     <TouchableOpacity style={{
                         backgroundColor: '#FFF',
                         padding: 16,
@@ -315,13 +311,10 @@ const HomeScreen = ({ route, navigation }) => {
                             }}>1 Day ago</Text>
                         </View>
                     </TouchableOpacity>
-
-
                 </ScrollView>
-
             </View>
-        </View>
-    )
+        </ScrollView>
+    );
 }
 
 export default HomeScreen;

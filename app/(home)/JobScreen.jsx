@@ -13,14 +13,18 @@ const JobScreen = () => {
                 <View>
                     <Image source={require('../../assets/office.png')}
                         style={{
-                            width: 420,
+                            width: '100%',
+                            height: 200,
                             resizeMode: 'cover'
                         }} />
                     <Image source={require('../../assets/google_banner.png')}
                         style={{
                             position: 'absolute',
                             alignSelf: 'center',
-                            bottom: -35
+                            bottom: -35,
+                            width: 100,
+                            height: 100,
+                            resizeMode: 'contain'
                         }} />
                 </View>
 
@@ -31,11 +35,13 @@ const JobScreen = () => {
                 }}>
                     <Text style={{
                         fontWeight: '600',
-                        fontSize: 24
+                        fontSize: 24,
+                        textAlign: 'center'
                     }}>Security Engineering Manager</Text>
                     <Text style={{
                         fontWeight: '300',
-                        fontSize: 16
+                        fontSize: 16,
+                        textAlign: 'center'
                     }}>California, USA</Text>
                 </View>
 
@@ -45,7 +51,7 @@ const JobScreen = () => {
                         fontWeight: '600',
                         marginBottom: 16
                     }}>Requirements</Text>
-                    <Text>{`Bachelor's degree in Computer Science, a related technical field, or equivalent practical experience\n\nExperience managing a team of engineering or security operations professionals for an organization. \n\nExperience with threat modeling.`}</Text>
+                    <Text style={{ fontSize: 16, lineHeight: 24 }}>{`Bachelor's degree in Computer Science, a related technical field, or equivalent practical experience\n\nExperience managing a team of engineering or security operations professionals for an organization. \n\nExperience with threat modeling.`}</Text>
                 </View>
 
                 <View style={{ padding: 16 }}>
@@ -54,7 +60,7 @@ const JobScreen = () => {
                         fontWeight: '600',
                         marginBottom: 16
                     }}>Qualifications</Text>
-                    <Text>{`Experience growing and developing a team. \n\nExperience with automation and Security Analysis. \n\nExperience in technical program management.`}</Text>
+                    <Text style={{ fontSize: 16, lineHeight: 24 }}>{`Experience growing and developing a team. \n\nExperience with automation and Security Analysis. \n\nExperience in technical program management.`}</Text>
                 </View>
 
                 <View style={{ padding: 16 }}>
@@ -63,14 +69,14 @@ const JobScreen = () => {
                         fontWeight: '600',
                         marginBottom: 16
                     }}>Skills Needed</Text>
-                    <Text>Design Thinking  •  Problem Solving</Text>
+                    <Text style={{ fontSize: 16, lineHeight: 24 }}>Design Thinking  •  Problem Solving</Text>
                 </View>
 
                 <View style={{
                     flexDirection: 'row',
                     padding: 16,
-                    position: 'absolute',
-                    bottom: 0
+                    justifyContent: 'space-between',
+                    marginBottom: 16
                 }}>
                     <TouchableOpacity style={{
                         flex: 1,
@@ -82,27 +88,23 @@ const JobScreen = () => {
                         alignItems: 'center'
                     }}>
                         <Text style={{
-                            color: '#FFF'
+                            color: '#FFF',
+                            fontSize: 16
                         }}>Apply Now</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={{
                         backgroundColor: '#3F6CDF',
                         padding: 16,
-                        borderRadius: 16
+                        borderRadius: 16,
+                        justifyContent: 'center',
+                        alignItems: 'center'
                     }}>
                         <Ionicons name='chatbox-ellipses-outline' size={24} color='#FFF' />
                     </TouchableOpacity>
-
-
                 </View>
-
-
-
-
             </View>
         </>
-
     )
 }
 
